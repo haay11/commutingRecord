@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "280030963353",
+    "firebase_url": "https://commutingrecord.firebaseio.com",
+    "project_id": "commutingrecord",
+    "storage_bucket": "commutingrecord.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280030963353:android:d8afcf6345f96ed17efa08",
+        "android_client_info": {
+          "package_name": "com.example.commutingrecord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280030963353-t42kdvjs3g824lgktj02i3o22efc5hnd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.commutingrecord",
+            "certificate_hash": "c80c7432f282931c73de17c72db1b54c3175f238"
+          }
+        },
+        {
+          "client_id": "280030963353-lo0oh1rptlt1f2iav8c6c743hm3jkj91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWLnJWGiTZp0xfAHnft_05g9KgF1aMg8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280030963353-lo0oh1rptlt1f2iav8c6c743hm3jkj91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
