@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purpleish_blue"
+    tools:context=".main.MainActivity">
+<include layout="@layout/toolbar_toolbar"/>
+    <TextView
+        android:id="@+id/main_text"
+        android:textStyle="bold"
+        android:textColor="@color/white_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.1"
+        />
+    <ImageView
+        android:id="@+id/main_attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_btn_white"
+
+        app:layout_constraintRight_toLeftOf="@+id/main_leave_work"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        />
+    <TextView
+        android:id="@+id/main_attendance_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purpleish_blue"
+        android:text="01.20(월) 출근"
+        android:textSize="10sp"
+
+        app:layout_constraintRight_toRightOf="@+id/main_attendance"
+        app:layout_constraintLeft_toLeftOf="@+id/main_attendance"
+        app:layout_constraintTop_toTopOf="@+id/main_attendance"
+        app:layout_constraintBottom_toBottomOf="@+id/main_attendance"
+        app:layout_constraintBottom_toTopOf="@+id/main_attendance_tv_check"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_bias="1.1"
+        />
+    <TextView
+        android:id="@+id/main_attendance_tv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purpleish_blue"
+        android:textSize="20dp"
+        android:text="출근하기"
+
+        app:layout_constraintRight_toRightOf="@+id/main_attendance"
+        app:layout_constraintLeft_toLeftOf="@+id/main_attendance"
+        app:layout_constraintBottom_toBottomOf="@+id/main_attendance"
+        app:layout_constraintTop_toTopOf="@+id/main_attendance"
+        app:layout_constraintTop_toBottomOf="@+id/main_attendance_time"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.57"
+        />
+
+    <ImageView
+        android:id="@+id/main_leave_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_btn_blue"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/main_attendance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        />
+    <TextView
+        android:id="@+id/main_leave_work_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_two"
+        android:text="01.20(월) 퇴근"
+        android:textSize="10sp"
+
+        app:layout_constraintRight_toRightOf="@+id/main_leave_work"
+        app:layout_constraintLeft_toLeftOf="@+id/main_leave_work"
+        app:layout_constraintTop_toTopOf="@+id/main_leave_work"
+        app:layout_constraintBottom_toBottomOf="@+id/main_leave_work"
+        app:layout_constraintBottom_toTopOf="@+id/main_leave_work_tv_check"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_bias="1.1"
+        />
+    <TextView
+        android:id="@+id/main_leave_work_tv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_two"
+        android:textSize="20dp"
+        android:text="11:20"
+
+        app:layout_constraintRight_toRightOf="@+id/main_leave_work"
+        app:layout_constraintLeft_toLeftOf="@+id/main_leave_work"
+        app:layout_constraintBottom_toBottomOf="@+id/main_leave_work"
+        app:layout_constraintTop_toTopOf="@+id/main_leave_work"
+        app:layout_constraintTop_toBottomOf="@+id/main_leave_work_time"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.57"
+        />
+    <TextView
+        android:id="@+id/main_announce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/main_announcement"
+        android:textColor="@color/white_two"
+        android:textSize="14sp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.87"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

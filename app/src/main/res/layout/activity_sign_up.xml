@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_grey"
+    >
+
+    <include layout="@layout/toolbar_toolbar" />
+
+    <TextView
+        android:id="@+id/sign_up_email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/dark"
+        android:text="@string/input_email"
+
+        app:layout_constraintStart_toStartOf="@+id/sign_up_email_ed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        />
+
+    <EditText
+        android:id="@+id/sign_up_email_ed"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:hint="@string/id_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_email_tv"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_pw_ed"
+        android:layout_marginTop="6dp"/>
+
+    <Button
+        android:id="@+id/email_check_btn"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="확인"
+        android:textColor="@color/white_two"
+        android:background="@drawable/custom_color_blue"
+
+        app:layout_constraintLeft_toRightOf="@+id/sign_up_email_ed"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_email_ed"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_email_ed"
+        />
+    <ImageView
+        android:id="@+id/email_warning_img"
+        android:layout_width="15dp"
+        android:layout_height="13.3dp"
+        android:src="@drawable/ic_warning"
+        android:visibility="invisible"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_pw_ed"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_email_ed"
+        app:layout_constraintRight_toLeftOf="@+id/email_warning_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/email_warning_tv"
+        />
+    <TextView
+        android:id="@+id/email_warning_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warning_email_check"
+        android:textColor="@color/pumpkin_orange"
+        android:visibility="invisible"
+
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toRightOf="@+id/email_warning_img"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_email_ed"
+        />
+
+    <TextView
+    android:id="@+id/sign_up_pw_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/pw"
+    android:textSize="12sp"
+
+    android:layout_marginTop="13.7dp"
+    app:layout_constraintStart_toStartOf="@+id/sign_up_pw_ed"
+    app:layout_constraintTop_toBottomOf="@+id/email_warning_img"
+
+    />
+    <EditText
+        android:id="@+id/sign_up_pw_ed"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/pw_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+        android:inputType="textPassword"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_pw_tv"
+        />
+
+
+    <ImageView
+        android:id="@+id/pw_warning_img"
+        android:layout_width="15dp"
+        android:layout_height="13.3dp"
+        android:src="@drawable/ic_warning"
+        android:visibility="invisible"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_pw_ed"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_pw_ed"
+        app:layout_constraintRight_toLeftOf="@+id/pw_warning_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/pw_warning_tv"
+        />
+    <TextView
+        android:id="@+id/pw_warning_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warning_pw"
+        android:textColor="@color/pumpkin_orange"
+        android:visibility="invisible"
+
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toRightOf="@+id/pw_warning_img"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_pw_ed"
+        />
+    <TextView
+        android:id="@+id/sign_up_check_pw_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pw"
+        android:textSize="12sp"
+
+        android:layout_marginTop="13.7dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_pw_ed"
+        app:layout_constraintTop_toBottomOf="@+id/pw_warning_img"
+
+        />
+    <EditText
+        android:id="@+id/sign_up_check_pw_ed"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/pw_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+        android:inputType="textPassword"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_check_pw_tv"
+        />
+
+    <ImageView
+        android:id="@+id/pw_check_warning_img"
+        android:layout_width="15dp"
+        android:layout_height="13.3dp"
+        android:src="@drawable/ic_warning"
+        android:visibility="invisible"
+
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_check_pw_ed"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_check_pw_ed"
+        app:layout_constraintRight_toLeftOf="@+id/pw_check_warning_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/pw_check_warning_tv"
+        />
+    <TextView
+        android:id="@+id/pw_check_warning_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warning_pw_check"
+        android:textColor="@color/pumpkin_orange"
+        android:visibility="invisible"
+
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toRightOf="@+id/pw_warning_img"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_check_pw_ed"
+        />
+
+    <TextView
+        android:id="@+id/sign_up_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textSize="12sp"
+
+        android:layout_marginTop="13.7dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_name_ed"
+        app:layout_constraintTop_toBottomOf="@+id/pw_check_warning_img"
+
+        />
+    <EditText
+        android:id="@+id/sign_up_name_ed"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/user_name_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_name_tv"
+        />
+
+    <TextView
+    android:id="@+id/sign_up_company_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/user_company"
+    android:textSize="12sp"
+
+    android:layout_marginTop="30dp"
+    app:layout_constraintStart_toStartOf="@+id/sign_up_company_spinner"
+    app:layout_constraintTop_toBottomOf="@+id/sign_up_name_ed"
+
+    />
+    <Spinner
+        android:id="@+id/sign_up_company_spinner"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/user_company_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_company_tv"
+        />
+
+    <TextView
+        android:id="@+id/sign_up_department_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department"
+        android:textSize="12sp"
+
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_department_ed"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_company_spinner"
+
+        />
+    <EditText
+        android:id="@+id/sign_up_department_ed"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/department_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_department_tv"
+        />
+    <TextView
+        android:id="@+id/sign_up_position_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/position"
+        android:textSize="12sp"
+
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_position_ed"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_department_ed"
+
+        />
+    <EditText
+        android:id="@+id/sign_up_position_ed"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:hint="@string/position_hint"
+        android:background="@drawable/custom_edittext_border"
+        android:singleLine = "true"
+        android:lines = "1"
+
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_position_tv"
+        />
+
+        <Button
+            android:id="@+id/sign_up_cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_color_black"
+            android:text="@string/cancel_btn"
+            android:textColor="@color/white_two"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintRight_toLeftOf="@+id/sign_up_btn2"
+            />
+        <Button
+            android:id="@+id/sign_up_btn2"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_color_blue"
+            android:text="@string/sign_up_btn"
+            android:textColor="@color/white_two"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toRightOf="@+id/sign_up_cancel_btn"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
